@@ -1,3 +1,7 @@
+body{
+	background: #EAEAEA;
+}
+
 .navbar .nav-top {
     margin-bottom: 20px;
     transition: margin-bottom .3s, background-color .3s;
