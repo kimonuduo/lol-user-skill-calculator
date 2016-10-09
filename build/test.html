@@ -1,0 +1,35 @@
+ <div class="login-form-bg">
+        <form name="login_form" id="login_form" method="post">
+            <table>
+                <tr>
+                    <td>{translate id='Game'}Login:{/translate}</td>
+                    <td><input type="text" name="ss_users_pseudo" /></td>
+                </tr>
+                <tr>
+                    <td>{translate id='Game'}Password:{/translate}</td>
+                    <td><input type="password" name="ss_users_password" /></td>
+                </tr>
+                <tr height="30px">
+                    <td>&nbsp;</td>
+                    <td>
+                    <fb:login-button perms="email" id="facebook-login-button"></fb:login-button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="checkbox"><label for="request_password">{translate id='Game'}<a href="forgotPassword.php">Request password</a>{/translate}</label></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="checkbox">{translate id='Game'}Remember me{/translate} <input type="checkbox" name="ss_users_remenber_me" value="1" /></td>
+                </tr>
+
+            </table>
+                <a href="#" onclick="document.login_form.submit(); return false;" name="connect" id="connect">
+                    <div class="button-action login-button-div">
+                        <span><span><span>
+                            {translate id='Game'}Login{/translate}
+                        </span></span></span>
+                    </div>
+                </a>
+        </form>
