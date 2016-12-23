@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/result.css" rel="stylesheet">
     <!-- Custom CSS goes here -->
-    <script src="js/result.js"></script>
+
 </head>
 <body>
     <!-- Custom HTML goes here -->
@@ -36,3 +36,16 @@
 <script src="js/bundle.js"></script>
 </body>
 </html>
+
+<script>
+window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+    document.getElementById('here').innerHTML = data.name;
+}
+</script>
