@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>lol-user-skill-calculator</title>
-      <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
     <!-- Custom CSS goes here -->
 
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Custom HTML goes here -->
-   <form name="form1 input-group" action="result.html" method="get" align="center" style="padding-top:300px;">
-name : <input type ="text" id="name" name="name">
-		<!-- <input type ="text" id="number" name="number"> -->
+    <form name="form1 input-group" action="result.html" method="get" align="center" style="padding-top:300px;">
+        <input type="text" id="name" name="name" placeholder="Search">
+        <!-- <input type ="text" id="number" name="number"> -->
 
-<button type="button" id="print" onClick="testJS()"> Search </button>
-</form>
+        <button type="button" id="print" onclick="testJS()"> <font>Search</font> </button>
+    </form>
 
- <!-- <div class="input-group form1" action="result.html" method="get" style="padding-left:40%;padding-right:40%;" align="center">
+    <!-- <div class="input-group form1" action="result.html" method="get" style="padding-left:40%;padding-right:40%;" align="center">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" id="print" onClick="testJS()">Go!</button>
       </span>
@@ -38,40 +40,62 @@ name : <input type ="text" id="name" name="name">
     <script src="js/bootstrap.min.js"></script>
     <!-- App code -->
     <script src="js/bundle.js"></script>
-  </body>
+</body>
+
 </html>
 <script>
-$("input").keypress(function(e) {
-  if (e.keyCode == 13) {
-    $(this).closest("form").submit();
-  }
-});
+    $("input").keypress(function(e) {
+        if (e.keyCode == 13) {
+            $(this).closest("form").submit();
+        }
+    });
 
-function testJS() {
-    var b = document.getElementById('name').value,
-        url = './result.html?name=' + encodeURIComponent(b);
+    function testJS() {
+        var b = document.getElementById('name').value,
+            url = './result.html?name=' + encodeURIComponent(b);
 
-    document.location.href = url;
-}
+        document.location.href = url;
+    }
 </script>
 <style>
-input[type=text], select {
-    width: 250px;
-    height: 35px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-#print{
-  background-color: #4CAF50;
-   color: white;
-   padding: 14px 20px;
-   margin: 8px 0;
-   border: none;
-   border-radius: 4px;
-   cursor: pointer;
-}
+    input[type=text],
+    select {
+        border-bottom-right-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        width: 250px;
+        height: 35px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        outline: -webkit-focus-ring-color auto 2px;
+        !important
+    }
+
+    #print {
+        border-bottom-left-radius: 0px !important;
+        border-top-left-radius: 0px !important;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 12px;
+        margin: 8px -4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        padding-top: 3px;
+        padding-bottom: 6px;
+    }
+
+    #print:hover {
+        background-color: #11a716;
+    }
+
+    #print font {
+        font-size: 18px;
+    }
 </style>

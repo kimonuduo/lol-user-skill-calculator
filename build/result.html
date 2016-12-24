@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,39 +14,60 @@
     <!-- Custom CSS goes here -->
 
 </head>
+
 <body>
     <!-- Custom HTML goes here -->
     <form class="navbar-form navbar-right" role="search" style="padding-right:100px">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
-<row>
-    <div class="col-md-12" style="padding-top:300px;" align="center">
-      <form name="form1" action="next.html" method="get">
-        <font id="here"></font>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
     </form>
-</div>
-</row>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<!-- App code -->
-<script src="js/bundle.js"></script>
+    <row>
+        <div class="col-md-12" align="center">
+            <form name="form1" action="next.html" method="get">
+                <font id="here2"></font>
+            </form>
+            <div class="media">
+              <div class="media-left">
+                <img src="s"/>
+              </div>
+               <div class="media-top media-right">
+                </div>
+                <div class="media-bottom media-right">
+                 </div>
+            </div>
+        </div>
+    </row>
+    <row>
+        <div class="col-md-12" style="padding-top:50px;" align="center">
+            <form name="form1" action="next.html" method="get">
+                <font id="here"></font>
+            </form>
+        </div>
+    </row>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- App code -->
+    <script src="js/bundle.js"></script>
 </body>
+
 </html>
 
 <script>
-window.onload = function () {
-    var url = document.location.href,
-        params = url.split('?')[1].split('&'),
-        data = {}, tmp;
-    for (var i = 0, l = params.length; i < l; i++) {
-         tmp = params[i].split('=');
-         data[tmp[0]] = tmp[1];
+    window.onload = function() {
+        var url = document.location.href,
+            params = url.split('?')[1].split('&'),
+            data = {},
+            tmp;
+        for (var i = 0, l = params.length; i < l; i++) {
+            tmp = params[i].split('=');
+            data[tmp[0]] = tmp[1];
+        }
+        document.getElementById('here').innerHTML = data.name;
+        document.getElementById('here2').innerHTML = data.name;
     }
-    document.getElementById('here').innerHTML = data.name;
-}
 </script>
